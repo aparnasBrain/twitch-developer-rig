@@ -130,7 +130,10 @@ export class ExtensionView extends Component {
             orientation={this.props.orientation}
           />}
 
-        {(this.props.type === ExtensionAnchor.Overlay || this.props.type === ExtensionAnchor.Panel) &&
+        {(this.props.type === ExtensionAnchor.Overlay
+          || this.props.type === ExtensionAnchor.Panel
+          || this.props.type === ExtensionMode.Config
+          || this.props.type === ExtensionViewType.LiveConfig) &&
           <div
           className="view"
           style={extensionProps.viewStyles}>
